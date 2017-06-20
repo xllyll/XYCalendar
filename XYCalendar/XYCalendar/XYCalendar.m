@@ -91,8 +91,6 @@
     }
     
     
-    
-    
     XYCalendar *upc = [[XYCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian year:upyear month:upmonth];
     return upc;
 }

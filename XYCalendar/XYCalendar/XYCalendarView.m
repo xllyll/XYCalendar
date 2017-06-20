@@ -310,7 +310,10 @@
     }
     return self;
 }
-
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self setup];
+}
 -(void)setup{
     
     
@@ -399,7 +402,8 @@
     _scrollView = [[XYCalendarScrollView alloc] initWithFrame:CGRectMake(0, topWeekHeight + topHeight, self.bounds.size.width, self.bounds.size.height-(topWeekHeight + topHeight))];
     _scrollView.pagingEnabled = YES;
     _scrollView.userInteractionEnabled = YES;
-    _scrollView.showsHorizontalScrollIndicator = YES;
+    _scrollView.showsVerticalScrollIndicator = NO;
+    _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.delegate = self;
     [self addSubview:_scrollView];
     
